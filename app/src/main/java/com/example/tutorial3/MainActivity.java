@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
         else if (psw.length() == 0){
             Toast.makeText(this, "Please Enter Password", Toast.LENGTH_SHORT).show();
         }
-        else if (name.equals("admin@gmail.com") && psw.equals("admin"))
+        else if (name.getText().toString().equals("admin@gmail.com") && psw.getText().toString().equals("admin"))
         {
+            Toast.makeText(this, "Welcome to the page", Toast.LENGTH_SHORT).show();
+
             Intent intent = new Intent(this,Activity2.class);
             startActivity(intent);
             finish();
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         else
         {
             Toast.makeText(this, "Username and password is incorect...", Toast.LENGTH_SHORT).show();
+
         }
     }
 }
